@@ -1,22 +1,24 @@
 # main.py
 s = input()
 
-letter_count = 0
-digit_count = 0
-space_count = 0
-other_count = 0
+letters = 0
+digits = 0
+spaces = 0
+others = 0
 
 for ch in s:
+    # 只算英文字母 A-Z, a-z
     if ('A' <= ch <= 'Z') or ('a' <= ch <= 'z'):
-        letter_count += 1
+        letters += 1
     elif ch.isdigit():
-        digit_count += 1
-    elif ch == ' ':
-        space_count += 1
+        digits += 1
+    elif ch.isspace():
+        spaces += 1
     else:
-        other_count += 1
+        others += 1
 
-print("英文字符: {}".format(letter_count))
-print("数字: {}".format(digit_count))
-print("空格: {}".format(space_count))
-print("其他字符: {}".format(other_count))
+# 严格匹配测试脚本要求的输出格式（英文冒号+1空格）
+print("英文字符: {}".format(letters))
+print("数字: {}".format(digits))
+print("空格: {}".format(spaces))
+print("其他字符: {}".format(others))
