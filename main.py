@@ -11,12 +11,12 @@ for ch in s:
         letter_count += 1
     elif ch.isdigit():
         digit_count += 1
-    elif ch.isspace():
+    elif ch == ' ':
         space_count += 1
     else:
         other_count += 1
 
-print(f"英文字符: {letter_count}")
-print(f"数字: {digit_count}")
-print(f"空格: {space_count}")
-print(f"其他字符: {other_count}")
+print("英文字符: {}".format(letter_count))
+print("数字: {}".format(digit_count))
+print("空格: {}".format(space_count))
+print("其他字符: {}".format(other_count))
